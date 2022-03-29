@@ -21,7 +21,7 @@ const fetchCat = async (text) => {
 function CatItem(props) {
   return (
     <li>
-      <img src={props.img} style={{width: '150px', border: '1px solid red'}}/>
+      <img src={props.img} style={{ width: '150px' }} />
     </li>
   );
 }
@@ -105,8 +105,7 @@ const App = () => {
   const CAT1 = "https://cataas.com/cat/60b73094e04e18001194a309/says/react";
   const CAT2 = "https://cataas.com//cat/5e9970351b7a400011744233/says/inflearn";
   const CAT3 = "https://cataas.com/cat/595f280b557291a9750ebf65/says/JavaScript";
-  const EMPTY_HEART = "🤍";
-  const FULL_HEART = "💖";
+
   // const [counter, setCounter] = React.useState(jsonLocalStorage.getItem("counter"));
   // 처음 한 번만 접근하기 위해 함수 사용 
   const [counter, setCounter] = React.useState(() => {
@@ -150,9 +149,9 @@ const App = () => {
   return (
     <div>
       <Title>{counterTitle} 고양이 가라사대</Title>
+      <Form updateMainCat={updateMainCat}/>
       <MainCard img={mainCatImg} onHeartClick={handleHeartClick} alreadyFavorite={alreadyFavorite}/>
       <Favorites favorites={favorites}/>
-      <Form updateMainCat={updateMainCat}/>
     </div>
   );
 }
